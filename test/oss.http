@@ -1,0 +1,70 @@
+### Put Object Simply with Metadata
+POST http://localhost:9000/simple/se-test-data/tticon?name=tt&age=12 HTTP/1.1
+
+< ./icon.png
+
+### Put Object By Importer
+POST http://localhost:9000/simple/se-test-data/2018_06_12/pending/imp-kef-4699979615713347984?SP%3ddev%26FileName%3dCathytest++c1_d402dbc5-c53f-4b75-b84e-bf794c848ef5.kef%26Status%3dpending HTTP/1.1
+
+< ./icon.png
+
+### Get Object By Importer
+GET http://localhost:9000/simple/se-test-import/2018_06_12/pending/imp-kef-4699979615713347984
+
+### Post Object Simply Excel
+POST http://localhost:9000/simple/se-test-data/Configure_tag_import_20180606132641.xlsx HTTP/1.1
+
+< ./interface.xlsx
+
+### Put Object Simply Excel
+PUT http://localhost:9000/simple/se-test-data/Configure_tag_import_20180606132641.xlsx HTTP/1.1
+
+< ./interface.xlsx
+
+### Put Object with Dir with Metadata
+PUT http://localhost:9000/simple/se-test-data/2018-01-01/upload/testicon?a=b&b=c HTTP/1.1
+
+< ./icon.png
+
+### Get Object with Dir with Metadata
+GET http://localhost:9000/simple/se-test-data/2018-01-01/upload/testicon HTTP/1.1
+
+
+### Put Object with Dir with Metadata
+POST http://localhost:9000/simple/se-test-data/2018-01-01/upload/testicon?a=b&b=c HTTP/1.1
+
+< ./icon.png
+
+### Put Object wo/ body
+POST http://localhost:9000/simple/se-test-data/emptybody HTTP/1.1
+
+
+### Get Object
+GET http://localhost:9000/simple/se-test-data/Configure_tag_import_20180606132641.xlsx HTTP/1.1
+content-type: application/json
+
+### Get Unexist Object
+GET http://localhost:9000/simple/se-test-data/123123 HTTP/1.1
+content-type: application/json
+
+### Get Image
+GET http://localhost:9000/simple/se-test-data/tticon HTTP/1.1
+content-type: application/json
+
+### Get Url
+GET http://localhost:9000/simple/geturl/se-test-data/image003.jpg HTTP/1.1
+content-type: application/json
+
+### Get ImageUrl
+POST http://localhost:9000/simple/getimageurl/se-test-data/image003.jpg HTTP/1.1
+content-type: application/json
+
+{
+  "Height": 200,
+  "Width": 600,
+  "Mode": 0,
+  "X": 1,
+  "Y": 2,
+  "Type": "png",
+  "Compression": 30
+}

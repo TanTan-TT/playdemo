@@ -1,2 +1,12 @@
-*.class
+logs
+target
+.g8
+.ensime_cache
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
 *.log
+.ensime
