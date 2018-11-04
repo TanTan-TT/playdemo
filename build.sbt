@@ -13,6 +13,7 @@ libraryDependencies += "net.logstash.logback" % "logstash-logback-encoder" % "4.
 libraryDependencies += "com.netaporter" %% "scala-uri" % "0.4.16"
 libraryDependencies += "net.codingwell" %% "scala-guice" % "4.2.1"
 libraryDependencies += "com.aliyun.oss" % "aliyun-sdk-oss" % "2.8.3"
+libraryDependencies += "com.aliyun.openservices" % "tablestore" % "4.7.3"
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test
 
 // Adds additional packages into Twirl

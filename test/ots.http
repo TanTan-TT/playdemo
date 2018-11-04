@@ -1,0 +1,2 @@
+### Get Raw Data
+GET http://localhost:9000/data/raw/655361/1527155100~1527156900

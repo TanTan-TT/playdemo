@@ -3,6 +3,41 @@
 # https://www.playframework.com/documentation/latest/ScalaRouting
 # ~~~~
 
-->     /simple               simple.SimpleFileRouter
-->     //simple               simple.SimpleFileRouter
+## Simple for OSS
 
+# Just for bucket & key
+GET     /simple/:bucket/:key                        simple.SimpleController.get(bucket: String, key: String)
+GET     //simple/:bucket/:key                       simple.SimpleController.get(bucket: String, key: String)
+
+# For key with directory
+GET     /simple/:bucket/:date/:dir/:key             simple.SimpleController.getWithDir(bucket: String, date: String, dir: String, key: String)
+GET     //simple/:bucket/:date/:dir/:key            simple.SimpleController.getWithDir(bucket: String, date: String, dir: String, key: String)
+
+# Geturl
+GET     /simple/getUrl/:bucket/:key                 simple.SimpleController.getUrl(bucket: String, key: String)
+GET     //simple/getUrl/:bucket/:key                simple.SimpleController.getUrl(bucket: String, key: String)
+
+# Geturl
+POST     /simple/getimageurl                        simple.SimpleController.getImageUrl(bucket: String, key: String)
+POST     //simple/getimageurl                       simple.SimpleController.getImageUrl(bucket: String, key: String)
+
+# Save file to OSS
+POST     /simple/:bucket/:key                        simple.SimpleController.post(bucket: String, key: String)
+POST     //simple/:bucket/:key                       simple.SimpleController.post(bucket: String, key: String)
+
+# Save file with dir to OSS
+POST     /simple/:bucket/:date/:dir/:key             simple.SimpleController.postWithDir(bucket: String, date: String, dir: String, key: String)
+POST     //simple/:bucket/:date/:dir/:key            simple.SimpleController.postWithDir(bucket: String, date: String, dir: String, key: String)
+
+# Save file to OSS
+PUT     /simple/:bucket/:key                        simple.SimpleController.post(bucket: String, key: String)
+PUT     //simple/:bucket/:key                       simple.SimpleController.post(bucket: String, key: String)
+
+# Save file with dir to OSS
+PUT     /simple/:bucket/:date/:dir/:key             simple.SimpleController.postWithDir(bucket: String, date: String, dir: String, key: String)
+PUT     //simple/:bucket/:date/:dir/:key            simple.SimpleController.postWithDir(bucket: String, date: String, dir: String, key: String)
+
+
+## Tag for OTS
+GET     /data/raw/:tagId/:startTime~:endTime        tag.TagRawController.get(tagId: Int, startTime: Long, endTime: Long)
+GET     //data/raw/:tagId/:startTime~:endTime       tag.TagRawController.get(tagId: Int, startTime: Long, endTime: Long)
