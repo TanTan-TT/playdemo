@@ -1,2 +1,35 @@
 ### Get Raw Data
-GET http://localhost:9000/data/raw/655361/1527155100~1527156900
+GET http://localhost:9000/data/raw/1/1524182867~1524200000
+
+
+
+### Post Raw Data
+POST http://localhost:9000/data/raw
+Content-Type: application/json
+
+[
+  {
+    "TagId": 1,
+    "Time": 1524182868,
+    "Value": 1.23,
+    "RawValue": 1.23,
+    "Quality": 0
+  },
+  {
+    "TagId": 1,
+    "Time": 1524182869,
+    "Value": 2.23,
+    "RawValue": 1.23
+  }
+]
+
+### Delete` Raw Data
+DELETE  http://localhost:9000/data/raw
+Content-Type: application/json
+
+[
+  {
+    "TagId": 1,
+    "Time": 1524182868
+  }
+]

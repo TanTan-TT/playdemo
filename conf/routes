@@ -41,3 +41,12 @@ PUT     //simple/:bucket/:date/:dir/:key            simple.SimpleController.post
 ## Tag for OTS
 GET     /data/raw/:tagId/:startTime~:endTime        tag.TagRawController.get(tagId: Int, startTime: Long, endTime: Long)
 GET     //data/raw/:tagId/:startTime~:endTime       tag.TagRawController.get(tagId: Int, startTime: Long, endTime: Long)
+
+POST    /data/raw                                   tag.TagRawController.post
+POST    //data/raw                                  tag.TagRawController.post
+
+PUT     /data/raw                                   tag.TagRawController.post
+PUT     //data/raw                                  tag.TagRawController.post
+
+DELETE    /data/raw                                 tag.TagRawController.delete
+DELETE    //data/raw                                tag.TagRawController.delete
