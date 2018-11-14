@@ -16,7 +16,7 @@ class TagRawController @Inject()(cc: TagControllerComponents)(implicit ec: Execu
 
     private val logger = Logger(getClass)
 
-    def get(tagId: Int, startTime: Long, endTime: Long) = Action { implicit request =>
+    def get(tagId: Long, startTime: Long, endTime: Long) = Action { implicit request =>
       val tableName = config.get[String]("tagRawDataTableName")
       logger.trace(s"get tableName: $tableName")
       repo.getRawData(tableName, tagId, startTime, endTime) match {

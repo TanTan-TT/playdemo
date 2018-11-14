@@ -33,3 +33,30 @@ Content-Type: application/json
     "Time": 1524182868
   }
 ]
+
+
+### Get Tag Data
+GET http://localhost:9000/data/tag/1/1/1524182867~1524200000
+
+
+
+### Post Tag Data
+POST http://localhost:9000/data/tag
+Content-Type: application/json
+
+[
+  {
+    "TagId": 1,
+    "Step": 1,
+    "Time": 1524182868,
+    "Value": 1.23,
+    "Quality": 0
+  },
+  {
+    "TagId": 1,
+    "Step": 1,
+    "Time": 1524182869,
+    "Value": 2.23,
+    "Quality": 0
+  }
+]
